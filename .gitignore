@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+.cache/
+public
+
+# Build
+.DS_Store
+.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
