@@ -2,11 +2,12 @@ import type { GatsbyConfig } from "gatsby"
 require('dotenv').config()
 
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title: `SF Nook`,
-    description: `SF Nook - Community Art Space`,
-    siteUrl: `https://thesfnook.com`
-  },
+    pathPrefix: "/thesfnook",  // Add this line
+    siteMetadata: {
+      title: `SF Nook`,
+      description: `SF Nook - Community Art Space`,
+      siteUrl: `https://thesfnook.com`  // Update this to your domain
+    },
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
