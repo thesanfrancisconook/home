@@ -80,7 +80,7 @@ const groupedEvents = events.reduce((groups, event) => {
             href="https://tally.so/r/w21pEb" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-block bg-orange-100 text-orange-800 border border-orange-200 px-8 py-3 rounded-lg hover:bg-orange-200 transition-colors"  
           >
             Submit Your Event
           </a>
@@ -141,3 +141,5 @@ const groupedEvents = events.reduce((groups, event) => {
 }
 
 export default EventsPage
+
+

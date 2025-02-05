@@ -67,7 +67,7 @@ const EventCard = ({ event }: { event: EventType }) => {
     >
       <div className="flex justify-between items-start mb-4">
         <h3 className="text-xl font-medium">{event.title}</h3>
-        <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+        <span className="bg-orange-50 text-orange-800 text-xs px-2 py-1 rounded border border-orange-100">  
           {event.eventType}
         </span>
       </div>
