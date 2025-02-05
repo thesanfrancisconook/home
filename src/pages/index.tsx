@@ -6,15 +6,14 @@ import { StaticImage } from "gatsby-plugin-image"
 const IndexPage = () => {
   return (
     <Layout>
-      <main className="min-h-screen flex flex-col">
-        <div className="flex-grow flex items-center justify-center px-4">
-          <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Title and Subtitle */}
+      <main className="min-h-screen flex flex-col pt-28"> 
+      <div className="flex-grow flex items-center justify-center px-4 py-12">
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start"> 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-              className="text-left"
+              className="text-left flex flex-col justify-center h-full"
             >
               <div>
                 <span className="text-5xl font-light tracking-wider text-gray-800">The</span>
@@ -77,15 +76,15 @@ const IndexPage = () => {
 
         {/* Footer Message */}
         <motion.div 
-      className="absolute bottom-0 left-0 right-0 py-8 text-center"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.2, duration: 0.6 }}
-    >
-      <p className="text-orange-700 text-sm">
-        ⚠️ The Space is currently being set up. Give us a couple of weeks before walking in.
-      </p>
-    </motion.div>
+          className="w-full py-8 text-center relative" // Changed from absolute to relative
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+        >
+          <p className="text-orange-700 text-sm">
+            ⚠️ The Space is currently being set up. Give us a couple of weeks before walking in.
+          </p>
+        </motion.div>
       </main>
     </Layout>
   )
