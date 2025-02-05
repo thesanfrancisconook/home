@@ -13,7 +13,7 @@ const IndexPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-              className="text-left flex flex-col justify-center h-full"
+              className="text-center flex flex-col justify-center h-full"
             >
               <div>
                 <span className="text-5xl font-light tracking-wider text-gray-800">The</span>
@@ -32,12 +32,12 @@ const IndexPage = () => {
                 </motion.span>
               </div>
               <motion.p 
-                className="mt-6 text-xl text-gray-600 tracking-wide"
+                className="mt-6 text-xl text-gray-600 tracking-wide space-y-2"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                A community art collective in San Francisco
+                A communal living room in San Francisco
                 <br />
                 <span className="text-lg text-gray-500">
                   1242 Market St, San Francisco, CA 94103
@@ -64,7 +64,7 @@ const IndexPage = () => {
 
                   <div>
                     <h3 className="font-medium mb-2 text-gray-800">What can I do here?</h3>
-                    <p>Whatever you want! (That's the best part) You want to host an event? Do it here! You want to film a music video? This is the place! You want to hold a weekly dance class? Have you seen these hard wood floors?! You want to get together for a weekly Bollywood movie night? Look no further than The Nook! Need a place to just hang and work with friends? Our door is open!</p>
+                    <p>Whatever you want! (That's the best part) You want to host an event? Do it here! You want to film a music video? This is the place! You want to hold a weekly dance class? Have you seen our hard wood floors?! You want to get together for a Bollywood movie night? Look no further than The Nook! Need a place to just hang and work with friends? Our door is open!</p>
                   </div>
 
                   <p className="text-lg font-light italic">You have a dream? Let's make it happen at The Nook!</p>
