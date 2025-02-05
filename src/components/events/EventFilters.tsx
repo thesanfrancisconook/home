@@ -9,7 +9,7 @@ interface FilterProps {
 }
 
 const EventFilters = ({ selectedType, selectedMonth, onTypeChange, onMonthChange }: FilterProps) => {
-  const eventTypes = ['all', 'art', 'yoga', 'talk', 'social', 'other']
+  const eventTypes = ['all', 'art', 'meditation', 'talk', 'social', 'classes', 'others']
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 
                  'July', 'August', 'September', 'October', 'November', 'December']
 

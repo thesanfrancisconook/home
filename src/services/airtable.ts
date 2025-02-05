@@ -7,10 +7,11 @@ export interface Event {
   endTime: string   
   description: string
   link: string
-  platform: 'luma' | 'partiful'
-  eventType: 'art' | 'yoga' | 'talk' | 'social' | 'other'
+  platform: 'luma' | 'partiful' | 'eventbrite' | 'meetup' | 'others'
+  eventType: 'art' | 'meditation' | 'talk' | 'social' | 'classes' | 'others'
   hostedBy: string
   tags: string[]
+
 }
 
 const base = new Airtable({ apiKey: process.env.AIRTABLE_PAT })
@@ -33,7 +34,7 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_PAT })
             title: record.get('Title') as string || 'Untitled Event',
             startTime: record.get('StartTime') as string || '',
             endTime: record.get('EndTime') as string || '',
-            description: record.get('Description') as string || '',
+            description: record.get('EventDescription') as string || '',
             link: record.get('Link') as string || '#',
             platform: ((record.get('Platform') as string)?.toLowerCase() || 'other') as 'luma' | 'partiful',
             eventType: ((record.get('EventType') as string)?.toLowerCase() || 'other') as 'art' | 'yoga' | 'talk' | 'social' | 'other',

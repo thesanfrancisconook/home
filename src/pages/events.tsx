@@ -66,7 +66,7 @@ const groupedEvents = events.reduce((groups, event) => {
 
   return (
     <Layout>
-       <main className="flex-grow pt-24 px-4 max-w-6xl mx-auto w-full">
+       <main className="flex-grow pt-32 px-4 max-w-6xl mx-auto w-full">
         {/* Host Event CTA */}
         <motion.div 
           className="mb-16 text-center"

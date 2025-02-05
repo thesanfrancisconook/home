@@ -7,8 +7,8 @@ type EventType = {
   endTime: string   
   description: string
   link: string
-  platform: 'luma' | 'partiful'
-  eventType: 'art' | 'yoga' | 'talk' | 'social' | 'other'
+  platform: 'luma' | 'partiful' | 'eventbrite' | 'meetup' | 'others'
+  eventType: 'art' | 'meditation' | 'talk' | 'social' | 'classes' | 'others'
   hostedBy: string
   tags: string[]
 }

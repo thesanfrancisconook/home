@@ -23,7 +23,7 @@ const Header = () => {
               to="/events" 
               className="text-xl text-gray-600 hover:text-gray-900 transition-colors relative group"
             >
-              <span className="relative z-10">Host an Event</span>
+              <span className="relative z-10">Events</span>
               <motion.span
                 className="absolute inset-0 bg-orange-100 rounded-lg opacity-0"
                 animate={{

@@ -54,23 +54,18 @@ const IndexPage = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl transform -rotate-1"></div>
               <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm">
-                <h2 className="text-2xl font-light mb-6 text-gray-800">Welcome</h2>
-                
-                <div className="space-y-6 text-gray-600">
-                  <div>
-                    <h3 className="font-medium mb-2 text-gray-800">So what is this place?</h3>
-                    <p>The Nook is San Francisco's newest communal living room/art collective/event space. Basically, it's a living, breathing experiment to connect people across this great city of ours.</p>
-                  </div>
 
-                  <div>
-                    <h3 className="font-medium mb-2 text-gray-800">What can I do here?</h3>
-                    <p>Whatever you want! (That's the best part) You want to host an event? Do it here! You want to film a music video? This is the place! You want to hold a weekly dance class? Have you seen our hard wood floors?! You want to get together for a Bollywood movie night? Look no further than The Nook! Need a place to just hang and work with friends? Our door is open!</p>
-                  </div>
-
-                  <p className="text-lg font-light italic">You have a dream? Let's make it happen at The Nook!</p>
-                </div>
+              <div className="space-y-6 text-gray-600">
+                <p className="leading-relaxed">
+                  Welcome to The Nook – San Francisco's newest hub for art, community, and creative expression. Host live music, dance classes, or workshops, or explore our hands-on creative studio for art and making—all without the barriers of high-cost event spaces.
+                </p>
+                <p className="leading-relaxed">
+                Take a moment to simply hang out, co-work, and connect in a space designed for genuine community
+                </p>
               </div>
+            </div>
             </motion.div>
+
           </div>
         </div>
 
@@ -82,10 +77,11 @@ const IndexPage = () => {
           transition={{ delay: 1.2, duration: 0.6 }}
         >
           <p className="text-orange-700 text-sm">
-            ⚠️ The Space is currently being set up. Give us a couple of weeks before walking in.
+            ⚠️ The Space is currently being set up and not ready for walk-ins.
           </p>
         </motion.div>
       </main>
+
     </Layout>
   )
 }
