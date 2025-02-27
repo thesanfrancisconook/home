@@ -57,7 +57,7 @@ const IndexPage = () => {
 
               <div className="space-y-6 text-gray-600">
                 <p className="leading-relaxed">
-                  Welcome to The Nook – San Francisco's newest hub for art, community, and creative expression. Host live music, dance classes, or workshops, or explore our hands-on creative studio for art and making—all without the barriers of high-cost event spaces.
+                  Welcome to The Nook – San Francisco's newest hub for art, community, and creative expression! Host live music, dance classes, or workshops, or explore our hands-on creative studio for art and making—all without the barriers of high-cost event spaces.
                 </p>
                 <p className="leading-relaxed">
                 Take a moment to simply hang out, co-work, and connect in a space designed for genuine community
