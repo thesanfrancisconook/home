@@ -3,14 +3,14 @@ import { motion } from "framer-motion"
 
 type EventType = {
   title: string
-  startTime: string    // New field
+  startTime: string
   endTime: string   
   description: string
   link: string
-  platform: 'luma' | 'partiful' | 'eventbrite' | 'meetup' | 'others'
-  eventType: 'art' | 'meditation' | 'talk' | 'social' | 'classes' | 'others'
+  eventType: string
   hostedBy: string
   tags: string[]
+  imageUrl?: string // Optional image URL
 }
 
 const formatDateTime = (startTime: string, endTime: string) => {
@@ -57,46 +57,56 @@ const formatDateTime = (startTime: string, endTime: string) => {
   }
 }
 
-
 const EventCard = ({ event }: { event: EventType }) => {
   return (
     <motion.div 
-      className="bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow"
+      className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.2 }}
     >
-      <div className="flex justify-between items-start mb-4">
-        <h3 className="text-xl font-medium">{event.title}</h3>
-        <span className="bg-orange-50 text-orange-800 text-xs px-2 py-1 rounded border border-orange-100">  
-          {event.eventType}
-        </span>
-      </div>
-      <p className="text-gray-500 text-sm">
-        {formatDateTime(event.startTime, event.endTime).date}
-      </p>
-      <p className="text-gray-500 text-sm">
-        {formatDateTime(event.startTime, event.endTime).time}
-      </p>
-      <p className="text-gray-600 text-sm mt-1">Hosted by {event.hostedBy}</p>
-      <p className="mt-4 text-gray-700">{event.description}</p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        {event.tags.map(tag => (
-          <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
-            {tag}
-          </span>
-        ))}
-      </div>
-      <a 
-        href={event.link}
-        target="_blank"
-        rel="noopener noreferrer" 
-        className="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800"
+      <div 
+        className="aspect-w-16 aspect-h-9 bg-gray-100 bg-cover bg-center"
+        style={event.imageUrl ? { backgroundImage: `url(${event.imageUrl})` } : undefined}
       >
-        <span>View on {event.platform}</span>
-        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
+        {/* Gradient overlay to ensure text readability */}
+        {event.imageUrl && (
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+        )}
+      </div>
+      <div className="p-4">
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-xl font-medium">{event.title}</h3>
+          <span className="bg-orange-50 text-orange-800 text-xs px-2 py-1 rounded border border-orange-100">  
+            {event.eventType}
+          </span>
+        </div>
+        <p className="text-gray-500 text-sm">
+          {formatDateTime(event.startTime, event.endTime).date}
+        </p>
+        <p className="text-gray-500 text-sm">
+          {formatDateTime(event.startTime, event.endTime).time}
+        </p>
+        <p className="text-gray-600 text-sm mt-1">Hosted by {event.hostedBy}</p>
+        <p className="mt-4 text-gray-700">{event.description}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {event.tags.map(tag => (
+            <span key={tag} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <a 
+          href={event.link}
+          target="_blank"
+          rel="noopener noreferrer" 
+          className="mt-4 inline-flex items-center text-orange-600 hover:text-orange-800"
+        >
+          View Event
+          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
     </motion.div>
   )
 }
